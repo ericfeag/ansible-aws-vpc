@@ -162,7 +162,7 @@
           Name: "db01"
           Project: Vprofile
           Owner: DevOps Team
-        exact_counts: 1
+        exact_count: 1
         count_tag:
           Name: "db01"
           Project: Vprofile
@@ -172,4 +172,5 @@
       register: db01_out
 
     - debug:
-        var: db01_out
+        var: db01_out.tagged_instances[0].id
+
